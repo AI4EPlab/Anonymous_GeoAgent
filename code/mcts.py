@@ -81,7 +81,6 @@ except:
     print("Unexpected error:", sys.exc_info()[0])
     raise
 # 设置环境变量
-# os.environ['EARTHENGINE_TOKEN'] = '{"redirect_uri": "http://localhost:8085", "refresh_token": "1//03guHkUKk4isCCgYIARAAGAMSNwF-L9Ir8TLF_S9enQC_vTo_mPnBLWBb6XUh4gJ7gdjuvgTIr7IJgkLy8nTRFXsDuXQP33lepBs", "scopes": ["https://www.googleapis.com/auth/earthengine", "https://www.googleapis.com/auth/cloud-platform", "https://www.googleapis.com/auth/devstorage.full_control"]}'
 import geemap
 
 m = geemap.Map()
