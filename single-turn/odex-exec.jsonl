@@ -1,0 +1,439 @@
+{"prompt": "decode a hex string '4a4b4c' to UTF-8.", "code": "bytes.fromhex('4a4b4c').decode('utf-8')", "library": [], "exlib": []}
+{"prompt": "check if all elements in list `myList` are identical", "code": "all(x == myList[0] for x in myList)", "library": [], "exlib": []}
+{"prompt": "format number of spaces between strings `Python`, `:` and `Very Good` to be `20`", "code": "'%*s : %*s' % (20, 'Python', 20, 'Very Good')", "library": [], "exlib": []}
+{"prompt": "convert a string `d` from CP-1251 to UTF-8", "code": "d.decode('cp1251').encode('utf8')", "library": [], "exlib": []}
+{"prompt": "get rid of None values in dictionary `kwargs`", "code": "{k: v for k, v in list(kwargs.items()) if v is not None}", "library": [], "exlib": []}
+{"prompt": "get rid of None values in dictionary `kwargs`", "code": "dict((k, v) for k, v in kwargs.items() if v is not None)", "library": [], "exlib": []}
+{"prompt": "capture final output of a chain of system commands `ps -ef | grep something | wc -l`", "code": "subprocess.check_output('ps -ef | grep something | wc -l', shell=True)", "library": ["subprocess"], "exlib": []}
+{"prompt": "concatenate a list of strings `['a', 'b', 'c']`", "code": "\"\"\"\"\"\".join(['a', 'b', 'c'])", "library": [], "exlib": []}
+{"prompt": "find intersection data between series `s1` and series `s2`", "code": "pd.Series(list(set(s1).intersection(set(s2))))", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "sending http headers to `client`", "code": "client.send('HTTP/1.0 200 OK\\r\\n')", "library": ["socket"], "exlib": []}
+{"prompt": "Format a datetime string `when` to extract date only", "code": "datetime.datetime.strptime(when, '%Y-%m-%d').date()", "library": ["datetime"], "exlib": []}
+{"prompt": "split a multi-line string `inputString` into separate strings", "code": "inputString.split('\\n')", "library": [], "exlib": []}
+{"prompt": "Split a multi-line string ` a \\n b \\r\\n c ` by new line character `\\n`", "code": "' a \\n b \\r\\n c '.split('\\n')", "library": [], "exlib": []}
+{"prompt": "concatenate elements of list `b` by a colon \":\"", "code": "\"\"\":\"\"\".join(str(x) for x in b)", "library": [], "exlib": []}
+{"prompt": "Calculate sum over all rows of 2D numpy array `a`", "code": "a.sum(axis=1)", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "enable warnings using action 'always'", "code": "warnings.simplefilter('always')", "library": ["warnings"], "exlib": []}
+{"prompt": "concatenate items of list `l` with a space ' '", "code": "' '.join(map(str, l))", "library": [], "exlib": []}
+{"prompt": "parse a time string '30/03/09 16:31:32.123' containing milliseconds in it", "code": "time.strptime('30/03/09 16:31:32.123', '%d/%m/%y %H:%M:%S.%f')", "library": ["time"], "exlib": []}
+{"prompt": "convert a string `my_string` with dot and comma into a float number `my_float`", "code": "my_float = float(my_string.replace(',', ''))", "library": [], "exlib": []}
+{"prompt": "convert a string `123,456.908` with dot and comma into a floating number", "code": "float('123,456.908'.replace(',', ''))", "library": [], "exlib": []}
+{"prompt": "set python path '/path/to/whatever' in python script", "code": "sys.path.append('/path/to/whatever')", "library": ["sys"], "exlib": []}
+{"prompt": "split string 'Words, words, words.' using a regex '(\\\\W+)'", "code": "re.split('(\\\\W+)', 'Words, words, words.')", "library": ["re"], "exlib": []}
+{"prompt": "open a file `Output.txt` in append mode", "code": "open('Output.txt', 'a')", "library": [], "exlib": []}
+{"prompt": "download a file \"http://www.example.com/songs/mp3.mp3\" over HTTP and save to \"mp3.mp3\"", "code": "urllib.request.urlretrieve('https://github.com/zorazrw/multilingual-conala/blob/master/dataset/test/es_test.json', 'mp3.mp3')", "library": ["urllib"], "exlib": []}
+{"prompt": "download a file 'http://www.example.com/' over HTTP", "code": "html = urllib.request.urlopen(url).read()", "library": ["urllib"], "exlib": []}
+{"prompt": "download a file `url` over HTTP", "code": "requests.get(url)", "library": ["requests"], "exlib": ["requests"]}
+{"prompt": "download a file `url` over HTTP and save to \"10MB\"", "code": "\n\tresponse = requests.get(url, stream=True)\n\twith open('10MB', 'wb') as handle:\n\t\tfor data in response.iter_content():\n\t\t\thandle.write(data)\n\t", "library": ["requests"], "exlib": ["requests"]}
+{"prompt": "argparse add argument with flag '--version' and version action of '%(prog)s 2.0' to parser `parser`", "code": "parser.add_argument('--version', action='version', version='%(prog)s 2.0')", "library": ["argparse"], "exlib": []}
+{"prompt": "remove key 'c' from dictionary `d`", "code": "{i: d[i] for i in d if i != 'c'}", "library": [], "exlib": []}
+{"prompt": "Create new DataFrame object by merging columns \"key\" of  dataframes `split_df` and `csv_df` and rename the columns from dataframes `split_df` and `csv_df` with suffix `_left` and `_right` respectively", "code": "pd.merge(split_df, csv_df, on=['key'], suffixes=('_left', '_right'))", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "Split a string `s` by space with `4` splits", "code": "s.split(' ', 4)", "library": [], "exlib": []}
+{"prompt": "enable debug mode on Flask application `app`", "code": "app.run(debug=True)", "library": ["flask"], "exlib": ["flask"]}
+{"prompt": "python save list `mylist` to file object 'save.txt'", "code": "pickle.dump(mylist, open('save.txt', 'wb'))", "library": ["pickle"], "exlib": []}
+{"prompt": "Multiply a matrix `P` with a 3d tensor `T` in scipy", "code": "scipy.tensordot(P, T, axes=[1, 1]).swapaxes(0, 1)", "library": ["numpy", "scipy"], "exlib": ["numpy", "scipy"]}
+{"prompt": "Create 3d array of zeroes of size `(3,3,3)`", "code": "numpy.zeros((3, 3, 3))", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "cut off the last word of a sentence `content`", "code": "\"\"\" \"\"\".join(content.split(' ')[:-1])", "library": [], "exlib": []}
+{"prompt": "convert scalar `x` to array", "code": "x = np.asarray(x).reshape(1, -1)[(0), :]", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "sum all elements of nested list `L`", "code": "sum(sum(i) if isinstance(i, list) else i for i in L)", "library": [], "exlib": []}
+{"prompt": "convert hex string '470FC614' to a float number", "code": "struct.unpack('!f', bytes.fromhex('470FC614'))[0]", "library": ["struct"], "exlib": []}
+{"prompt": "Multiple each value by `2` for all keys in a dictionary `my_dict`", "code": "my_dict.update((x, y * 2) for x, y in list(my_dict.items()))", "library": [], "exlib": []}
+{"prompt": "running bash script 'sleep.sh'", "code": "subprocess.call('sleep.sh', shell=True)", "library": ["subprocess"], "exlib": []}
+{"prompt": "Join elements of list `l` with a comma `,`", "code": "\"\"\",\"\"\".join(l)", "library": [], "exlib": []}
+{"prompt": "make a comma-separated string from a list `myList`", "code": "myList = ','.join(map(str, myList))", "library": [], "exlib": []}
+{"prompt": "reverse the list that contains 1 to 10", "code": "list(reversed(list(range(10))))", "library": [], "exlib": []}
+{"prompt": "remove substring 'bag,' from a string 'lamp, bag, mirror'", "code": "'lamp, bag, mirror'.replace('bag,', '')", "library": [], "exlib": []}
+{"prompt": "Reverse the order of words, delimited by `.`, in string `s`", "code": "\"\"\".\"\"\".join(s.split('.')[::-1])", "library": [], "exlib": []}
+{"prompt": "convert epoch time represented as milliseconds `s` to string using format '%Y-%m-%d %H:%M:%S.%f'", "code": "datetime.datetime.fromtimestamp(s).strftime('%Y-%m-%d %H:%M:%S.%f')", "library": ["datetime", "time"], "exlib": []}
+{"prompt": "parse milliseconds epoch time '1236472051807' to format '%Y-%m-%d %H:%M:%S'", "code": "time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime(1236472051807 / 1000.0))", "library": ["time"], "exlib": []}
+{"prompt": "get the date 7 days before the current date", "code": "(datetime.datetime.now() - datetime.timedelta(days=7)).date()", "library": ["datetime"], "exlib": []}
+{"prompt": "sum elements at index `column` of each list in list `data`", "code": "sum(row[column] for row in data)", "library": [], "exlib": []}
+{"prompt": "sum columns of a list `array`", "code": "[sum(row[i] for row in array) for i in range(len(array[0]))]", "library": [], "exlib": []}
+{"prompt": "encode binary string 'your string' to base64 code", "code": "base64.b64encode(bytes('your string', 'utf-8'))", "library": ["base64"], "exlib": []}
+{"prompt": "combine list of dictionaries `dicts` with the same keys in each list to a single dictionary", "code": "dict((k, [d[k] for d in dicts]) for k in dicts[0])", "library": [], "exlib": []}
+{"prompt": "Merge a nested dictionary `dicts` into a flat dictionary by concatenating nested values with the same key `k`", "code": "{k: [d[k] for d in dicts] for k in dicts[0]}", "library": [], "exlib": []}
+{"prompt": "get the url parameter 'myParam' in a Flask view", "code": "request.args['myParam']", "library": ["multidict"], "exlib": ["multidict"]}
+{"prompt": "identify duplicate values in list `mylist`", "code": "[k for k, v in list(Counter(mylist).items()) if v > 1]", "library": ["collections"], "exlib": []}
+{"prompt": "Insert a 'None' value into a SQLite3 table.", "code": "db.execute(\"INSERT INTO present VALUES('test2', ?, 10)\", (None,))", "library": ["sqlite3"], "exlib": []}
+{"prompt": "flatten list `list_of_menuitems`", "code": "[image for menuitem in list_of_menuitems for image in menuitem]", "library": ["collections"], "exlib": []}
+{"prompt": "append elements of a set `b` to a list `a`", "code": "a.extend(b)", "library": [], "exlib": []}
+{"prompt": "Split a string `x` by last occurrence of character `-`", "code": "x.rpartition('-')[0]", "library": [], "exlib": []}
+{"prompt": "get the last part of a string before the character '-'", "code": "x.rsplit('-', 1)[0]", "library": [], "exlib": []}
+{"prompt": "upload file using FTP", "code": "ftp.storlines('STOR ' + filename, open(filename, 'r'))", "library": ["ftplib"], "exlib": []}
+{"prompt": "create array containing the maximum value of respective elements of array `[2, 3, 4]` and array `[1, 5, 2]`", "code": "np.maximum([2, 3, 4], [1, 5, 2])", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "print a list `l` and move first 3 elements to the end of the list", "code": "l[3:] + l[:3]", "library": [], "exlib": []}
+{"prompt": "create a random list of integers", "code": "[int(1000 * random.random()) for i in range(10000)]", "library": ["random"], "exlib": []}
+{"prompt": "Using %f with strftime() in Python to get microseconds", "code": "datetime.datetime.now().strftime('%H:%M:%S.%f')", "library": ["datetime"], "exlib": []}
+{"prompt": "filter rows in pandas starting with alphabet 'f' using regular expression.", "code": "df.b.str.contains('^f')", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "print a 2 dimensional list `tab` as a table with delimiters", "code": "'\\n'.join('\\t'.join(str(col) for col in row) for row in tab)", "library": [], "exlib": []}
+{"prompt": "pandas: delete rows in dataframe `df` based on multiple columns values", "code": "df.set_index(list('BC')).drop(tuples, errors='ignore').reset_index()", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "format the variables `goals` and `penalties` using string formatting", "code": "\"\"\"({:d} goals, ${:d})\"\"\".format(goals, penalties)", "library": [], "exlib": []}
+{"prompt": "format string \"({} goals, ${})\" with variables `goals` and `penalties`", "code": "\"\"\"({} goals, ${})\"\"\".format(goals, penalties)", "library": [], "exlib": []}
+{"prompt": "convert list of lists `L` to list of integers", "code": "[int(''.join(str(d) for d in x)) for x in L]", "library": [], "exlib": []}
+{"prompt": "convert a list of lists `L` to list of integers", "code": "L = [int(''.join([str(y) for y in x])) for x in L]", "library": [], "exlib": []}
+{"prompt": "write the elements of list `lines` concatenated by special character '\\n' to file `myfile`", "code": "myfile.write('\\n'.join(lines))", "library": [], "exlib": []}
+{"prompt": "Remove duplicate words from a string `text` using regex", "code": "text = re.sub('\\\\b(\\\\w+)( \\\\1\\\\b)+', '\\\\1', text)", "library": ["re"], "exlib": []}
+{"prompt": "count non zero values in each column in pandas data frame `df`", "code": "df.astype(bool).sum(axis=1)", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "search for string that matches regular expression pattern '(?<!Distillr)\\\\\\\\AcroTray\\\\.exe' in string 'C:\\\\SomeDir\\\\AcroTray.exe'", "code": "re.search('(?<!Distillr)\\\\\\\\AcroTray\\\\.exe', 'C:\\\\SomeDir\\\\AcroTray.exe')", "library": ["re"], "exlib": []}
+{"prompt": "split string 'QH QD JC KD JS' into a list on white spaces", "code": "\"\"\"QH QD JC KD JS\"\"\".split()", "library": [], "exlib": []}
+{"prompt": "search for occurrences of regex pattern '>.*<' in xml string `line`", "code": "re.search('>.*<', line).group(0)", "library": ["re"], "exlib": []}
+{"prompt": "erase all the contents of a file `filename`", "code": "open(filename, 'w').close()", "library": [], "exlib": []}
+{"prompt": "convert a string `string_date` into datetime using the format '%Y-%m-%d %H:%M:%S.%f'", "code": "datetime.datetime.strptime(string_date, '%Y-%m-%d %H:%M:%S.%f')", "library": ["datetime"], "exlib": []}
+{"prompt": "find the index of a list with the first element equal to '332' within the list of lists `thelist`", "code": "[index for index, item in enumerate(thelist) if item[0] == '332']", "library": [], "exlib": []}
+{"prompt": "lower a string `text` and remove non-alphanumeric characters aside from space", "code": "re.sub('[^\\\\sa-zA-Z0-9]', '', text).lower().strip()", "library": ["re"], "exlib": []}
+{"prompt": "remove all non-alphanumeric characters except space from a string `text` and lower it", "code": "re.sub('(?!\\\\s)[\\\\W_]', '', text).lower().strip()", "library": ["re"], "exlib": []}
+{"prompt": "subscript text 'H20' with '2' as subscripted in matplotlib labels for arrays 'x' and 'y'.", "code": "plt.plot(x, y, label='H\\u2082O')", "library": ["matplotlib", "numpy"], "exlib": ["matplotlib", "numpy"]}
+{"prompt": "subscript text 'H20' with '2' as subscripted in matplotlib labels for arrays 'x' and 'y'.", "code": "plt.plot(x, y, label='$H_2O$')", "library": ["matplotlib", "numpy"], "exlib": ["matplotlib", "numpy"]}
+{"prompt": "loop over a list `mylist` if sublists length equals 3", "code": "[x for x in mylist if len(x) == 3]", "library": [], "exlib": []}
+{"prompt": "initialize a list `lst` of 100 objects Object()", "code": "lst = [Object() for _ in range(100)]", "library": [], "exlib": []}
+{"prompt": "joining data from dataframe `df1` with data from dataframe `df2` based on matching values of column 'Date_Time' in both dataframes", "code": "df1.merge(df2, on='Date_Time')", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "use `%s` operator to print variable values `str1` inside a string", "code": "'first string is: %s, second one is: %s' % (str1, 'geo.tif')", "library": [], "exlib": []}
+{"prompt": "Split a string '2.MATCHES $$TEXT$$ STRING' by a delimiter '$$TEXT$$'", "code": "[x.strip() for x in '2.MATCHES $$TEXT$$ STRING'.split('$$TEXT$$')]", "library": [], "exlib": []}
+{"prompt": "check if directory `directory ` exists and create it if necessary", "code": "if (not os.path.exists(directory)):\n\t    os.makedirs(directory)", "library": ["os"], "exlib": []}
+{"prompt": "check if a directory `path` exists and create it if necessary", "code": "try:\n\t    os.makedirs(path)\n\texcept OSError:\n\t    if (not os.path.isdir(path)):\n\t        raise", "library": ["os"], "exlib": []}
+{"prompt": "check if a directory `path` exists and create it if necessary", "code": "try:\n\t    os.makedirs(path)\n\texcept OSError as exception:\n\t    if (exception.errno != errno.EEXIST):\n\t        raise", "library": ["os"], "exlib": []}
+{"prompt": "Replace a separate word 'H3' by 'H1' in a string 'text'", "code": "re.sub('\\\\bH3\\\\b', 'H1', text)", "library": ["re"], "exlib": []}
+{"prompt": "substitute ASCII letters in string 'aas30dsa20' with empty string ''", "code": "re.sub('\\\\D', '', 'aas30dsa20')", "library": ["re"], "exlib": []}
+{"prompt": "get digits only from a string `aas30dsa20` using lambda function", "code": "\"\"\"\"\"\".join([x for x in 'aas30dsa20' if x.isdigit()])", "library": [], "exlib": []}
+{"prompt": "access a tag called \"name\" in beautifulsoup `soup`", "code": "soup.find('name').string", "library": ["bs4"], "exlib": ["bs4"]}
+{"prompt": "Create new matrix object  by concatenating data from matrix A and matrix B", "code": "np.concatenate((A, B))", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "concat two matrices `A` and `B` in numpy", "code": "np.vstack((A, B))", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "Get the characters count in a file `filepath`", "code": "os.stat(filepath).st_size", "library": ["os"], "exlib": []}
+{"prompt": "count the occurrences of item \"a\" in list `l`", "code": "l.count('a')", "library": [], "exlib": []}
+{"prompt": "count the occurrences of items in list `l`", "code": "Counter(l)", "library": ["collections"], "exlib": []}
+{"prompt": "count the occurrences of items in list `l`", "code": "[[x, l.count(x)] for x in set(l)]", "library": ["collections"], "exlib": []}
+{"prompt": "count the occurrences of items in list `l`", "code": "dict(((x, l.count(x)) for x in set(l)))", "library": ["collections"], "exlib": []}
+{"prompt": "count the occurrences of item \"b\" in list `l`", "code": "l.count('b')", "library": [], "exlib": []}
+{"prompt": "copy file `srcfile` to directory `dstdir`", "code": "shutil.copy(srcfile, dstdir)", "library": ["shutil"], "exlib": []}
+{"prompt": "find the key associated with the largest value in dictionary `x` whilst key is non-zero value", "code": "max(k for k, v in x.items() if v != 0)", "library": [], "exlib": []}
+{"prompt": "Put the curser at beginning of the file", "code": "file.seek(0)", "library": [], "exlib": []}
+{"prompt": "combine values from column 'b' and column 'a' of dataframe `df`  into column 'c' of datafram `df`", "code": "df['c'] = np.where(df['a'].isnull, df['b'], df['a'])", "library": ["numpy", "pandas"], "exlib": ["numpy", "pandas"]}
+{"prompt": "remove key 'ele' from dictionary `d`", "code": "del d['ele']", "library": [], "exlib": []}
+{"prompt": "merge list `['it']` and list `['was']` and list `['annoying']` into one list", "code": "['it'] + ['was'] + ['annoying']", "library": [], "exlib": []}
+{"prompt": "increment a value with leading zeroes in a number `x`", "code": "str(int(x) + 1).zfill(len(x))", "library": [], "exlib": []}
+{"prompt": "check if a pandas dataframe `df`'s index is sorted", "code": "all(df.index[:-1] <= df.index[1:])", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "Convert tuple `t` to list", "code": "list(t)", "library": [], "exlib": []}
+{"prompt": "Convert list `t` to tuple", "code": "tuple(t)", "library": [], "exlib": []}
+{"prompt": "Convert tuple `level1` to list", "code": "level1 = map(list, level1)", "library": [], "exlib": []}
+{"prompt": "send the output of pprint object `dataobject` to file `logFile`", "code": "pprint.pprint(dataobject, logFile)", "library": ["pprint"], "exlib": []}
+{"prompt": "get index of rows in column 'BoolCol'", "code": "df.loc[df['BoolCol']]", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "Create a list containing the indexes of rows where the value of column 'BoolCol' in dataframe `df` are equal to True", "code": "df.iloc[np.flatnonzero(df['BoolCol'])]", "library": ["numpy", "pandas"], "exlib": ["numpy", "pandas"]}
+{"prompt": "from dataframe `df` get list of indexes of rows where column 'BoolCol' values match True", "code": "df[df['BoolCol'] == True].index.tolist()", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "get index of rows in dataframe `df` which column 'BoolCol' matches value True", "code": "df[df['BoolCol']].index.tolist()", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "change working directory to the directory `owd`", "code": "os.chdir(owd)", "library": ["os"], "exlib": []}
+{"prompt": "insert data from a string `testfield` to sqlite db `c`", "code": "c.execute(\"INSERT INTO test VALUES (?, 'bar')\", (testfield,))", "library": ["sqlite3"], "exlib": []}
+{"prompt": "decode string \"\\\\x89\\\\n\" into a normal string", "code": "b'\\\\x89\\\\n'.decode('unicode_escape')", "library": ["sqlite3"], "exlib": []}
+{"prompt": "convert a raw string `raw_string` into a normal string", "code": "raw_string.decode('unicode_escape')", "library": [], "exlib": []}
+{"prompt": "convert a raw string `raw_byte_string` into a normal string", "code": "raw_byte_string.decode('unicode_escape')", "library": [], "exlib": []}
+{"prompt": "split a string `s` with into all strings of repeated characters", "code": "[m.group(0) for m in re.finditer('(\\\\d)\\\\1*', s)]", "library": ["re"], "exlib": []}
+{"prompt": "scatter a plot with x, y position of `np.random.randn(100)` and face color equal to none", "code": "plt.scatter(np.random.randn(100), np.random.randn(100), facecolors='none')", "library": ["matplotlib", "numpy"], "exlib": ["matplotlib", "numpy"]}
+{"prompt": "do a scatter plot with empty circles", "code": "plt.plot(np.random.randn(100), np.random.randn(100), 'o', mfc='none')", "library": ["matplotlib", "numpy"], "exlib": ["matplotlib", "numpy"]}
+{"prompt": "remove a div from `soup` with a id `main-content` using beautifulsoup", "code": "soup.find('div', id='main-content').decompose()", "library": ["bs4"], "exlib": ["bs4"]}
+{"prompt": "filter rows of datafram `df` containing key word `ball` in column `ids`", "code": "df[df['ids'].str.contains('ball')]", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "convert index at level 0 into a column in dataframe `df`", "code": "df.reset_index(level=0, inplace=True)", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "Add indexes in a data frame `df` to a column `index1`", "code": "df['index1'] = df.index", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "convert pandas index in a dataframe `df` to columns", "code": "df.reset_index(level=['tick', 'obs'])", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "Get reverse of list items from list 'b' using extended slicing", "code": "[x[::-1] for x in b]", "library": [], "exlib": []}
+{"prompt": "join each element in array `a` with element at the same index in array `b` as a tuple", "code": "np.array([zip(x, y) for x, y in zip(a, b)])", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "zip two 2-d arrays `a` and `b`", "code": "np.array(list(zip(a.ravel(),b.ravel())), dtype=('i4,i4')).reshape(a.shape)", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "convert list `list_of_ints` into a comma separated string", "code": "\"\"\",\"\"\".join([str(i) for i in list_of_ints])", "library": [], "exlib": []}
+{"prompt": "Send a post request with raw data `DATA` and basic authentication with `username` and `password`", "code": "requests.post(url, data=DATA, headers=HEADERS_DICT, auth=(username, password))", "library": ["requests"], "exlib": ["requests"]}
+{"prompt": "Find last occurrence of character '}' in string \"abcd}def}\"", "code": "'abcd}def}'.rfind('}')", "library": [], "exlib": []}
+{"prompt": "Iterate ove list `[1, 2, 3]` using list comprehension", "code": "[item for item in [1, 2, 3]]", "library": [], "exlib": []}
+{"prompt": "extract all the values with keys 'x' and 'y' from a list of dictionaries `d` to list of tuples", "code": "[(x['x'], x['y']) for x in d]", "library": [], "exlib": []}
+{"prompt": "get the filename without the extension from file 'hemanth.txt'", "code": "os.path.splitext(os.path.basename('hemanth.txt'))[0]", "library": ["os"], "exlib": []}
+{"prompt": "create a list containing flattened list `[['A', 'B', 'C'], ['D', 'E', 'F'], ['G', 'H', 'I']]`", "code": "sum([['A', 'B', 'C'], ['D', 'E', 'F'], ['G', 'H', 'I']], [])", "library": [], "exlib": []}
+{"prompt": "select rows in a dataframe `df` column 'closing_price' between two values 99 and 101", "code": "df = df[(df['closing_price'] >= 99) & (df['closing_price'] <= 101)]", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "replace all occurences of newlines `\\n` with `<br>` in dataframe `df`", "code": "df.replace({'\\n': '<br>'}, regex=True)", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "replace all occurrences of a string `\\n` by string `<br>` in a pandas data frame `df`", "code": "df.replace({'\\n': '<br>'}, regex=True)", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "create a list containing each two adjacent letters in string `word` as its elements", "code": "[(x + y) for x, y in zip(word, word[1:])]", "library": [], "exlib": []}
+{"prompt": "Get a list of pairs from a string `word` using lambda function", "code": "list(map(lambda x, y: x + y, word[:-1], word[1:]))", "library": [], "exlib": []}
+{"prompt": "extract a url from a string `myString`", "code": "re.findall('(https?://[^\\\\s]+)', myString)", "library": ["re"], "exlib": []}
+{"prompt": "extract a url from a string `myString`", "code": "re.search('(?P<url>https?://[^\\\\s]+)', myString).group('url')", "library": ["re"], "exlib": []}
+{"prompt": "remove all special characters, punctuation and spaces from a string `mystring` using regex", "code": "re.sub('[^A-Za-z0-9]+', '', mystring)", "library": ["re"], "exlib": []}
+{"prompt": "create a DatetimeIndex containing 13 periods of the second friday of each month starting from date '2016-01-01'", "code": "pd.date_range('2016-01-01', freq='WOM-2FRI', periods=13)", "library": ["datetime", "pandas"], "exlib": ["pandas"]}
+{"prompt": "Create multidimensional array `matrix` with 3 rows and 2 columns in python", "code": "matrix = [['a', 'b'], ['c', 'd'], ['e', 'f']]", "library": [], "exlib": []}
+{"prompt": "replace spaces with underscore in string `mystring`", "code": "mystring.replace(' ', '_')", "library": [], "exlib": []}
+{"prompt": "split string `my_string` on white spaces", "code": "\"\"\" \"\"\".join(my_string.split())", "library": [], "exlib": []}
+{"prompt": "get filename without extension from file `filename`", "code": "os.path.splitext(filename)[0]", "library": ["os"], "exlib": []}
+{"prompt": "get a list containing the sum of each element `i` in list `l` plus the previous elements", "code": "[sum(l[:i]) for i, _ in enumerate(l)]", "library": [], "exlib": []}
+{"prompt": "split a string `Docs/src/Scripts/temp` by `/` keeping `/` in the result", "code": "\"\"\"Docs/src/Scripts/temp\"\"\".replace('/', '/\\x00/').split('\\x00')", "library": [], "exlib": []}
+{"prompt": "shuffle columns of an numpy array 'r'", "code": "np.random.shuffle(np.transpose(r))", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "copy all values in a column 'B' to a new column 'D' in a pandas data frame 'df'", "code": "df['D'] = df['B']", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "find a value within nested json 'data' where the key inside another key 'B' is unknown.", "code": "list(data['A']['B'].values())[0]['maindata'][0]['Info']", "library": ["json"], "exlib": []}
+{"prompt": "check characters of string `string` are true predication of function `predicate`", "code": "all(predicate(x) for x in string)", "library": [], "exlib": []}
+{"prompt": "determine number of files on a drive with python", "code": "os.statvfs('/').f_files - os.statvfs('/').f_ffree", "library": ["os"], "exlib": []}
+{"prompt": "how to get a single result from a SQLite query from `cursor`", "code": "cursor.fetchone()[0]", "library": ["sqlite3"], "exlib": []}
+{"prompt": "convert string `user_input` into a list of integers `user_list`", "code": "user_list = [int(number) for number in user_input.split(',')]", "library": [], "exlib": []}
+{"prompt": "Get a list of integers by splitting  a string `user` with comma", "code": "[int(s) for s in user.split(',')]", "library": [], "exlib": []}
+{"prompt": "Sorting a Python list `list` by the first item ascending and last item descending", "code": "sorted(list, key=lambda x: (x[0], -x[1]))", "library": [], "exlib": []}
+{"prompt": "sort a list of objects `ut`, based on a function `cmpfun` in descending order", "code": "ut.sort(key=cmpfun, reverse=True)", "library": [], "exlib": []}
+{"prompt": "reverse list `ut` based on the `count` attribute of each object", "code": "ut.sort(key=lambda x: x.count, reverse=True)", "library": [], "exlib": []}
+{"prompt": "cast an int `i` to a string and concat to string 'ME'", "code": "'ME' + str(i)", "library": [], "exlib": []}
+{"prompt": "Sorting data in Pandas DataFrame `df` with columns 'System_num' and 'Dis'", "code": "df.sort_values(['System_num', 'Dis'])", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "prepend the line '#test firstline\\n' to the contents of file 'infile' and save as the file 'outfile'", "code": "open(outfile, 'w').write('#test firstline\\n' + open(infile).read())", "library": ["filecmp"], "exlib": []}
+{"prompt": "sort a list `l` by length of value in tuple", "code": "l.sort(key=lambda t: len(t[1]), reverse=True)", "library": [], "exlib": []}
+{"prompt": "split string `s` by words that ends with 'd'", "code": "re.findall('\\\\b(\\\\w+)d\\\\b', s)", "library": ["re"], "exlib": []}
+{"prompt": "return `True` if string `foobarrrr` contains regex `ba[rzd]`", "code": "bool(re.search('ba[rzd]', 'foobarrrr'))", "library": ["re"], "exlib": []}
+{"prompt": "Removing duplicates in list `t`", "code": "list(set(t))", "library": [], "exlib": []}
+{"prompt": "Removing duplicates in list `source_list`", "code": "list(set(source_list))", "library": [], "exlib": []}
+{"prompt": "Removing duplicates in list `abracadabra`", "code": "list(OrderedDict.fromkeys('abracadabra'))", "library": ["collections"], "exlib": []}
+{"prompt": "Convert array `a` into a list", "code": "numpy.array(a).reshape(-1).tolist()", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "Convert the first row of numpy matrix `a` to a list", "code": "numpy.array(a)[0].tolist()", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "In `soup`, get the content of the sibling of the `td`  tag with text content `Address:`", "code": "soup.find(text='Address:').findNext('td').contents[0]", "library": ["bs4"], "exlib": ["bs4"]}
+{"prompt": "convert elements of each tuple in list `l` into a string  separated by character `@`", "code": "\"\"\" \"\"\".join([('%d@%d' % t) for t in l])", "library": [], "exlib": []}
+{"prompt": "convert each tuple in list `l` to a string with '@' separating the tuples' elements", "code": "\"\"\" \"\"\".join([('%d@%d' % (t[0], t[1])) for t in l])", "library": [], "exlib": []}
+{"prompt": "Get all matches with regex pattern `\\\\d+[xX]` in list of string `teststr`", "code": "[i for i in teststr if re.search('\\\\d+[xX]', i)]", "library": ["re"], "exlib": []}
+{"prompt": "select values from column 'A' for which corresponding values in column 'B' will be greater than 50, and in column 'C' - equal 900 in dataframe `df`", "code": "df['A'][(df['B'] > 50) & (df['C'] == 900)]", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "Sort dictionary `o` in ascending order based on its keys and items", "code": "sorted(o.items())", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "get sorted list of keys of dict `d`", "code": "sorted(d)", "library": [], "exlib": []}
+{"prompt": "sort dictionaries `d` by keys", "code": "sorted(d.items())", "library": [], "exlib": []}
+{"prompt": "convert string \"1\" into integer", "code": "int('1')", "library": [], "exlib": []}
+{"prompt": "convert items in `T1` to integers", "code": "[list(map(int, x)) for x in T1]", "library": [], "exlib": []}
+{"prompt": "call a shell script `./test.sh` using subprocess", "code": "subprocess.call(['./test.sh'])", "library": ["subprocess"], "exlib": []}
+{"prompt": "call a shell script `notepad` using subprocess", "code": "subprocess.call(['notepad'])", "library": ["subprocess"], "exlib": []}
+{"prompt": "combine lists `l1` and `l2`  by alternating their elements", "code": "[val for pair in zip(l1, l2) for val in pair]", "library": [], "exlib": []}
+{"prompt": "encode string 'data to be encoded'", "code": "base64.b64encode(b'data to be encoded')", "library": ["base64"], "exlib": []}
+{"prompt": "encode a string `data to be encoded` to `ascii` encoding", "code": "'data to be encoded'.encode('ascii')", "library": [], "exlib": []}
+{"prompt": "parse tab-delimited CSV file 'text.txt' into a list", "code": "list(csv.reader(open('text.txt', 'r'), delimiter='\\t'))", "library": ["csv"], "exlib": []}
+{"prompt": "Get attribute `my_str` of object `my_object`", "code": "getattr(my_object, my_str)", "library": [], "exlib": []}
+{"prompt": "group a list of dicts `LD` into one dict by key", "code": "dict(zip(LD[0], zip(*[list(d.values()) for d in LD])))", "library": ["collections"], "exlib": []}
+{"prompt": "sum the first value in each tuple in a list of tuples `list_of_pairs` in python", "code": "sum([pair[0] for pair in list_of_pairs])", "library": [], "exlib": []}
+{"prompt": "convert unicode string u\"{'code1':1,'code2':1}\" into dictionary", "code": "ast.literal_eval(\"{'code1':1,'code2':1}\")", "library": ["ast"], "exlib": []}
+{"prompt": "find all words in a string `mystring` that start with the `$` sign", "code": "[word for word in mystring.split() if word.startswith('$')]", "library": [], "exlib": []}
+{"prompt": "remove any url within string `text`", "code": "text = re.sub('^https?:\\\\/\\\\/.*[\\\\r\\\\n]*', '', text, flags=re.MULTILINE)", "library": ["re"], "exlib": []}
+{"prompt": "replace all elements in array `A` that are not present in array `[1, 3, 4]` with zeros", "code": "np.where(np.in1d(A, [1, 3, 4]).reshape(A.shape), A, 0)", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "calculate mean across dimension in a 2d array `a`", "code": "np.mean(a, axis=1)", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "running r script '/pathto/MyrScript.r' from python", "code": "subprocess.call(['/usr/bin/Rscript', '--vanilla', '/pathto/MyrScript.r'])", "library": ["subprocess"], "exlib": []}
+{"prompt": "run r script '/usr/bin/Rscript --vanilla /pathto/MyrScript.r'", "code": "subprocess.call('/usr/bin/Rscript --vanilla /pathto/MyrScript.r', shell=True)", "library": ["subprocess"], "exlib": []}
+{"prompt": "replacing nan in the dataframe `df` with row average", "code": "df.fillna(df.mean(axis=0))", "library": ["numpy", "pandas"], "exlib": ["numpy", "pandas"]}
+{"prompt": "Convert unix timestamp '1347517370' to formatted string '%Y-%m-%d %H:%M:%S'", "code": "time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(1347517370))", "library": ["time"], "exlib": []}
+{"prompt": "selecting rows in Numpy ndarray 'a', where the value in the first column is 0 and value in the second column is 1", "code": "a[np.where((a[:, (0)] == 0) * (a[:, (1)] == 1))]", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "separate words delimited by one or more spaces into a list", "code": "re.split(' +', words)", "library": ["regex"], "exlib": ["regex"]}
+{"prompt": "length of longest element in list `words`", "code": "len(max(words, key=len))", "library": [], "exlib": []}
+{"prompt": "get the value associated with unicode key 'from_user' of first dictionary in list `result`", "code": "result[0]['from_user']", "library": [], "exlib": []}
+{"prompt": "Retrieve each line from a file 'File.txt' as a list", "code": "[line.split() for line in open('File.txt')]", "library": [], "exlib": []}
+{"prompt": "swap keys with values in a dictionary `a`", "code": "dict((v, k) for k, v in a.items())", "library": [], "exlib": []}
+{"prompt": "Open a file `path/to/FILE_NAME.ext` in write mode", "code": "open('path/to/FILE_NAME.ext', 'w')", "library": ["os"], "exlib": []}
+{"prompt": "count distinct values in a column 'col3' of a pandas dataframe `df` group by objects in 'col1' and 'col2'", "code": "df.groupby(['col1', 'col2'])['col3'].nunique().reset_index()", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "Check if any key in the dictionary `dict1` starts with the string `EMP$$`", "code": "any(key.startswith('EMP$$') for key in dict1)", "library": [], "exlib": []}
+{"prompt": "create list of values from dictionary `dict1` that have a key that starts with 'EMP$$'", "code": "[value for key, value in list(dict1.items()) if key.startswith('EMP$$')]", "library": [], "exlib": []}
+{"prompt": "convert a pandas series `sf` into a pandas dataframe `df` with columns `email` and `list`", "code": "df = pd.DataFrame({'email': sf.index, 'list': sf.values})", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "concatenate elements of list `list` by tabs `\t`", "code": "'\\t'.join(map(str, list))", "library": [], "exlib": []}
+{"prompt": "print unicode string '\\xd0\\xbf\\xd1\\x80\\xd0\\xb8' with utf-8", "code": "'\\xd0\\xbf\\xd1\\x80\\xd0\\xb8'.encode('raw_unicode_escape')", "library": [], "exlib": []}
+{"prompt": "Encode a latin character in string `Sopet\\xc3\\xb3n` properly", "code": "'Sopet\\xc3\\xb3n'.encode('latin-1').decode('utf-8')", "library": [], "exlib": []}
+{"prompt": "regex, find \"n\"s only in the middle of string `s`", "code": "re.findall('n(?<=[^n]n)n+(?=[^n])(?i)', s)", "library": ["re"], "exlib": []}
+{"prompt": "display the float `1/3*100` as a percentage", "code": "'{0:.0f}%'.format(1.0 / 3 * 100)", "library": [], "exlib": []}
+{"prompt": "sort a list of dictionary `mylist` by the key `title`", "code": "mylist.sort(key=lambda x: x['title'])", "library": [], "exlib": []}
+{"prompt": "sort a list `l` of dicts by dict value 'title'", "code": "l.sort(key=lambda x: x['title'])", "library": [], "exlib": []}
+{"prompt": "sort a list of dictionaries by the value of keys 'title', 'title_url', 'id' in ascending order.", "code": "l.sort(key=lambda x: (x['title'], x['title_url'], x['id']))", "library": [], "exlib": []}
+{"prompt": "find 10 largest differences between each respective elements of list `l1` and list `l2`", "code": "heapq.nlargest(10, range(len(l1)), key=lambda i: abs(l1[i] - l2[i]))", "library": ["heapq"], "exlib": []}
+{"prompt": "BeautifulSoup find all 'span' elements in HTML string `soup` with class of 'starGryB sp'", "code": "soup.find_all('span', {'class': 'starGryB sp'})", "library": ["bs4"], "exlib": ["bs4"]}
+{"prompt": "write records in dataframe `df` to table 'test' in schema 'a_schema' with `engine`", "code": "df.to_sql('test', engine)", "library": ["pandas", "sqlalchemy"], "exlib": ["pandas", "sqlalchemy"]}
+{"prompt": "Extract brackets from string `s`", "code": "re.sub('[^(){}[\\]]', '', s)", "library": ["re"], "exlib": []}
+{"prompt": "remove duplicate elements from list 'L'", "code": "list(dict((x[0], x) for x in L).values())", "library": [], "exlib": []}
+{"prompt": "read a file `file` without newlines", "code": "[line.rstrip('\\n') for line in file]", "library": [], "exlib": []}
+{"prompt": "get the position of item 1 in `testlist`", "code": "[i for (i, x) in enumerate(testlist) if (x == 1)]", "library": [], "exlib": []}
+{"prompt": "get the position of item 1 in `testlist`", "code": "[i for (i, x) in enumerate(testlist) if (x == 1)]", "library": [], "exlib": []}
+{"prompt": "get the position of item `element` in list `testlist`", "code": "testlist.index(element)", "library": [], "exlib": []}
+{"prompt": "find the first element of the tuple with the maximum second element in a list of tuples `lis`", "code": "max(lis, key=lambda item: item[1])[0]", "library": [], "exlib": []}
+{"prompt": "get the item at index 0 from the tuple that has maximum value at index 1 in list `lis`", "code": "max(lis, key=itemgetter(1))[0]", "library": ["operator"], "exlib": []}
+{"prompt": "Make a delay of 1 second", "code": "time.sleep(1)", "library": ["time"], "exlib": []}
+{"prompt": "convert list of tuples `L` to a string", "code": "\"\"\", \"\"\".join('(' + ', '.join(i) + ')' for i in L)", "library": [], "exlib": []}
+{"prompt": "Django set default value of field `b` equal to '0000000'", "code": "b = models.CharField(max_length=7, default='0000000', editable=False)", "library": ["django"], "exlib": ["django"]}
+{"prompt": "Sort lis `list5` in ascending order based on the degrees value of its elements", "code": "sorted(list5, key = lambda x: (degrees(x), x))", "library": ["math"], "exlib": []}
+{"prompt": "convert a list `l` into a generator object", "code": "(n for n in l)", "library": [], "exlib": []}
+{"prompt": "remove elements from list `oldlist` that have an index number mentioned in list `removelist`", "code": "[v for i, v in enumerate(oldlist) if i not in removelist]", "library": [], "exlib": []}
+{"prompt": "Open a file `yourfile.txt` in write mode", "code": "open('yourfile.txt', 'w')", "library": [], "exlib": []}
+{"prompt": "get attribute 'attr' from object `obj`", "code": "getattr(obj, attr)", "library": [], "exlib": []}
+{"prompt": "convert tuple of tuples `(('aa',), ('bb',), ('cc',))` to tuple", "code": "reduce(lambda a, b: a + b, (('aa',), ('bb',), ('cc',)))", "library": ["functools"], "exlib": []}
+{"prompt": "convert tuple of tuples `(('aa',), ('bb',), ('cc',))` to list in one line", "code": "list(map(lambda a: a[0], (('aa',), ('bb',), ('cc',))))", "library": [], "exlib": []}
+{"prompt": "replace a characters in a column of a dataframe `df`", "code": "df['range'].replace(',', '-', inplace=True)", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "unzip the list `[('a', 1), ('b', 2), ('c', 3), ('d', 4)]`", "code": "zip(*[('a', 1), ('b', 2), ('c', 3), ('d', 4)])", "library": [], "exlib": []}
+{"prompt": "unzip list `original`", "code": "([a for (a, b) in original], [b for (a, b) in original])", "library": [], "exlib": []}
+{"prompt": "unzip list `original` and return a generator", "code": "((a for (a, b) in original), (b for (a, b) in original))", "library": [], "exlib": []}
+{"prompt": "unzip list `[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', )]`", "code": "zip(*[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e',)])", "library": [], "exlib": []}
+{"prompt": "unzip list `[('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', )]` and fill empty results with None", "code": "list(zip_longest(('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e',)))", "library": ["itertools"], "exlib": []}
+{"prompt": "encode `Decimal('3.9')` to a JSON string", "code": "json.dumps('3.9')", "library": ["json"], "exlib": []}
+{"prompt": "Add key \"mynewkey\" to dictionary `d` with value \"mynewvalue\"", "code": "d['mynewkey'] = 'mynewvalue'", "library": [], "exlib": []}
+{"prompt": "Add key 'a' to dictionary `data` with value 1", "code": "data.update({'a': 1, })", "library": [], "exlib": []}
+{"prompt": "Add key 'a' to dictionary `data` with value 1", "code": "data.update(dict(a=1))", "library": [], "exlib": []}
+{"prompt": "Add key 'a' to dictionary `data` with value 1", "code": "data.update(a=1)", "library": [], "exlib": []}
+{"prompt": "find maximal value in matrix `matrix`", "code": "max([max(i) for i in matrix])", "library": [], "exlib": []}
+{"prompt": "Round number `answer` to 2 precision after the decimal point", "code": "answer = str(round(answer, 2))", "library": [], "exlib": []}
+{"prompt": "extract ip address `ip` from an html string `s`", "code": "ip = re.findall('[0-9]+(?:\\\\.[0-9]+){3}', s)", "library": ["re"], "exlib": []}
+{"prompt": "filter dataframe `df` by values in column `A` that appear more than once", "code": "df.groupby('A').filter(lambda x: len(x) > 1)", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "append each line in file `myfile` into a list", "code": "[x for x in myfile if x != '']", "library": [], "exlib": []}
+{"prompt": "Get a list of integers `lst` from a file `filename.txt`", "code": "lst = list(map(int, open('filename.txt').readlines()))", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "add color bar with image `mappable` to plot `plt`", "code": "plt.colorbar(mappable=mappable, cax=ax3)", "library": ["matplotlib", "numpy", "obspy"], "exlib": ["matplotlib", "numpy", "obspy"]}
+{"prompt": "count most frequent 100 words in column 'text' of dataframe `df`", "code": "Counter(' '.join(df['text']).split()).most_common(100)", "library": ["collections", "pandas"], "exlib": ["pandas"]}
+{"prompt": "generate all 2-element subsets of tuple `(1, 2, 3)`", "code": "list(itertools.combinations((1, 2, 3), 2))", "library": ["itertools"], "exlib": []}
+{"prompt": "get a value of datetime.today() in the UTC time zone", "code": "datetime.now(pytz.utc)", "library": ["datetime", "pytz", "time"], "exlib": ["pytz"]}
+{"prompt": "Get a new list `list2`by removing empty list from a list of lists `list1`", "code": "list2 = [x for x in list1 if x != []]", "library": [], "exlib": []}
+{"prompt": "Create `list2` to contain the lists from list `list1` excluding the empty lists from `list1`", "code": "list2 = [x for x in list1 if x]", "library": [], "exlib": []}
+{"prompt": "Django response with JSON `data`", "code": "HttpResponse(data, content_type='application/json')", "library": ["django", "json", "os"], "exlib": ["django"]}
+{"prompt": "get all text that is not enclosed within square brackets in string `example_str`", "code": "re.findall('(.*?)\\\\[.*?\\\\]', example_str)", "library": ["re"], "exlib": []}
+{"prompt": "Use a regex to get all text in a string `example_str` that is not surrounded by square brackets", "code": "re.findall('(.*?)(?:\\\\[.*?\\\\]|$)', example_str)", "library": ["re"], "exlib": []}
+{"prompt": "get whatever is between parentheses as a single match, and any char outside as an individual match in string '(zyx)bc'", "code": "re.findall('\\\\(.+?\\\\)|\\\\w', '(zyx)bc')", "library": ["re"], "exlib": []}
+{"prompt": "match regex '\\\\((.*?)\\\\)|(\\\\w)' with string '(zyx)bc'", "code": "re.findall('\\\\((.*?)\\\\)|(\\\\w)', '(zyx)bc')", "library": ["re"], "exlib": []}
+{"prompt": "match multiple regex patterns with the alternation operator `|` in a string `(zyx)bc`", "code": "re.findall('\\\\(.*?\\\\)|\\\\w', '(zyx)bc')", "library": ["re"], "exlib": []}
+{"prompt": "formate each string cin list `elements` into pattern '%{0}%'", "code": "elements = ['%{0}%'.format(element) for element in elements]", "library": [], "exlib": []}
+{"prompt": "Open a background process 'background-process' with arguments 'arguments'", "code": "subprocess.Popen(['background-process', 'arguments'])", "library": ["subprocess"], "exlib": []}
+{"prompt": "get list of values from dictionary 'mydict' w.r.t. list of keys 'mykeys'", "code": "[mydict[x] for x in mykeys]", "library": [], "exlib": []}
+{"prompt": "convert list `[('Name', 'Joe'), ('Age', 22)]` into a dictionary", "code": "dict([('Name', 'Joe'), ('Age', 22)])", "library": [], "exlib": []}
+{"prompt": "average each two columns of array `data`", "code": "data.mean(axis=1).reshape(data.shape[0], -1)", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "double backslash escape all double quotes in string `s`", "code": "s.replace('\"', '\\\"')", "library": [], "exlib": []}
+{"prompt": "split a string `s` into a list of words and whitespace", "code": "re.split('(\\\\W+)', s)", "library": ["re"], "exlib": []}
+{"prompt": "plotting stacked barplots on a panda data frame `df`", "code": "df.plot(kind='barh', stacked=True)", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "reverse the keys and values in a dictionary `myDictionary`", "code": "{i[1]: i[0] for i in list(myDictionary.items())}", "library": [], "exlib": []}
+{"prompt": "finding the index of elements containing substring 'how' and 'what' in a list of strings 'myList'.", "code": "[i for i, j in enumerate(myList) if 'how' in j.lower() or 'what' in j.lower()]", "library": [], "exlib": []}
+{"prompt": "check if object `obj` is a string", "code": "isinstance(obj, str)", "library": [], "exlib": []}
+{"prompt": "check if object `o` is a string", "code": "isinstance(o, str)", "library": [], "exlib": []}
+{"prompt": "check if object `o` is a string", "code": "(type(o) is str)", "library": [], "exlib": []}
+{"prompt": "check if `obj_to_test` is a string", "code": "isinstance(obj_to_test, str)", "library": [], "exlib": []}
+{"prompt": "append list `list1` to `list2`", "code": "list2.extend(list1)", "library": [], "exlib": []}
+{"prompt": "append list `mylog` to `list1`", "code": "list1.extend(mylog)", "library": [], "exlib": []}
+{"prompt": "append list `a` to `c`", "code": "c.extend(a)", "library": [], "exlib": []}
+{"prompt": "append items in list `mylog` to `list1`", "code": "for line in mylog:\n\t    list1.append(line)", "library": [], "exlib": []}
+{"prompt": "append a tuple of elements from list `a` with indexes '[0][0] [0][2]' to list `b`", "code": "b.append((a[0][0], a[0][2]))", "library": [], "exlib": []}
+{"prompt": "Initialize `SECRET_KEY` in flask config with `Your_secret_string `", "code": "app.config['SECRET_KEY'] = 'Your_secret_string'", "library": ["flask"], "exlib": ["flask"]}
+{"prompt": "unpack a series of tuples in pandas `out` into a DataFrame with column names 'out-1' and 'out-2'", "code": "pd.DataFrame(out.tolist(), columns=['out-1', 'out-2'], index=out.index)", "library": ["numpy", "pandas", "scipy"], "exlib": ["numpy", "pandas", "scipy"]}
+{"prompt": "find the index of an element 'MSFT' in a list `stocks_list`", "code": "[x for x in range(len(stocks_list)) if stocks_list[x] == 'MSFT']", "library": [], "exlib": []}
+{"prompt": "rotate the xtick `labels` of matplotlib plot `ax` by `45` degrees to make long labels readable", "code": "ax.set_xticklabels(labels, rotation=45)", "library": ["matplotlib"], "exlib": ["matplotlib"]}
+{"prompt": "remove symbols from a string `s`", "code": "re.sub('[^\\\\w]', ' ', s)", "library": ["re"], "exlib": []}
+{"prompt": "Find octal characters matches from a string `s` using regex", "code": "re.findall(\"'\\\\\\\\[0-7]{1,3}'\", s)", "library": ["re"], "exlib": []}
+{"prompt": "split string `input` based on occurrences of regex pattern '[ ](?=[A-Z]+\\\\b)'", "code": "re.split(r'[ ](?=[A-Z]+\\b)', input)", "library": ["re"], "exlib": []}
+{"prompt": "Split string `input` at every space followed by an upper-case letter", "code": "re.split('[ ](?=[A-Z])', input)", "library": ["re"], "exlib": []}
+{"prompt": "send multipart encoded file `files` to url `url` with headers `headers` and metadata `data`", "code": "requests.post(url, files=files, headers=headers, data=data)", "library": ["requests"], "exlib": ["requests"]}
+{"prompt": "write bytes `bytes_` to a file `filename` in python 3", "code": "open(filename, 'wb').write(bytes_)", "library": [], "exlib": []}
+{"prompt": "get a list from a list `lst` with values mapped into a dictionary `dct`", "code": "[dct[k] for k in lst]", "library": [], "exlib": []}
+{"prompt": "find duplicate names in column 'name' of the dataframe `x`", "code": "x['name'][x.duplicated('name')]", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "truncate float 1.923328437452 to 3 decimal places", "code": "round(1.923328437452, 3)", "library": [], "exlib": []}
+{"prompt": "sort list `li` in descending order based on the date value in second element of each list in list `li`", "code": "sorted(li, key=lambda x: datetime.strptime(x[1], '%d/%m/%Y'), reverse=True)", "library": ["datetime"], "exlib": []}
+{"prompt": "place the radial ticks in plot `ax` at 135 degrees", "code": "ax.set_rlabel_position(135)", "library": ["matplotlib"], "exlib": ["matplotlib"]}
+{"prompt": "check if path `my_path` is an absolute path", "code": "os.path.isabs(my_path)", "library": ["os"], "exlib": []}
+{"prompt": "get number of keys in dictionary `yourdict`", "code": "len(list(yourdict.keys()))", "library": [], "exlib": []}
+{"prompt": "count the number of keys in dictionary `yourdictfile`", "code": "len(set(open(yourdictfile).read().split()))", "library": [], "exlib": []}
+{"prompt": "pandas dataframe `df` get first row of each group by 'id'", "code": "df.groupby('id').first()", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "split a list in first column into multiple columns keeping other columns as well in pandas data frame `df`", "code": "pd.concat([df[0].apply(pd.Series), df[1]], axis=1)", "library": ["numpy", "pandas"], "exlib": ["numpy", "pandas"]}
+{"prompt": "extract attributes 'src=\"js/([^\"]*\\\\bjquery\\\\b[^\"]*)\"' from string `data`", "code": "re.findall('src=\"js/([^\"]*\\\\bjquery\\\\b[^\"]*)\"', data)", "library": ["re"], "exlib": []}
+{"prompt": "Sum integers contained in strings in list `['', '3.4', '', '', '1.0']`", "code": "sum(int(float(item)) for item in [_f for _f in ['', '3.4', '', '', '1.0'] if _f])", "library": [], "exlib": []}
+{"prompt": "Call a subprocess with arguments `c:\\\\Program Files\\\\VMware\\\\VMware Server\\\\vmware-cmd.bat` that may contain spaces", "code": "subprocess.Popen(['c:\\\\Program Files\\\\VMware\\\\VMware Server\\\\vmware-cmd.bat'])", "library": ["subprocess"], "exlib": []}
+{"prompt": "reverse a priority queue `q` in python without using classes", "code": "for n in [1,3,4,2]: q.put((-n, n))", "library": ["queue"], "exlib": []}
+{"prompt": "make a barplot of data in column `group` of dataframe `df` colour-coded according to list `color`", "code": "df['group'].plot(kind='bar', color=['r', 'g', 'b', 'r', 'g', 'b', 'r'])", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "find all matches of regex pattern '([a-fA-F\\\\d]{32})' in string `data`", "code": "re.findall('([a-fA-F\\\\d]{32})', data)", "library": ["re"], "exlib": []}
+{"prompt": "Get the length of list `my_list`", "code": "len(my_list)", "library": [], "exlib": []}
+{"prompt": "Getting the length of array `l`", "code": "len(l)", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "Getting the length of array `s`", "code": "len(s)", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "Getting the length of `my_tuple`", "code": "len(my_tuple)", "library": [], "exlib": []}
+{"prompt": "Getting the length of `my_string`", "code": "len(my_string)", "library": [], "exlib": []}
+{"prompt": "remove escape character from string \"\\\\a\"", "code": "b'\\\\a'.decode('unicode-escape')", "library": [], "exlib": []}
+{"prompt": "replace each 'a' with 'b' and each 'b' with 'a' in the string 'obama' in a single pass.", "code": "\"\"\"obama\"\"\".replace('a', '%temp%').replace('b', 'a').replace('%temp%', 'b')", "library": [], "exlib": []}
+{"prompt": "remove directory tree '/folder_name'", "code": "shutil.rmtree('/folder_name')", "library": ["os", "shutil"], "exlib": []}
+{"prompt": "create a new column `weekday` in pandas data frame `data` based on the values in column `my_dt`", "code": "\n    def weekday(i):\n        if i >=1 and i <= 5: return True\n        else: return False\n    data['weekday'] = data['my_dt'].apply(lambda x: weekday(x))\n", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "reverse sort Counter `x` by values", "code": "sorted(x, key=x.get, reverse=True)", "library": ["collections"], "exlib": []}
+{"prompt": "reverse sort counter `x` by value", "code": "sorted(list(x.items()), key=lambda pair: pair[1], reverse=True)", "library": ["collections"], "exlib": []}
+{"prompt": "append a numpy array 'b' to a numpy array 'a'", "code": "np.vstack((a, b))", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "numpy concatenate two arrays `a` and `b` along the first axis", "code": "np.concatenate((a, b), axis=0)", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "numpy concatenate two arrays `a` and `b` along the second axis", "code": "np.concatenate((a, b), axis=1)", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "numpy concatenate two arrays `a` and `b` along the first axis", "code": "np.r_[(a[None, :], b[None, :])]", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "numpy concatenate two arrays `a` and `b` along the first axis", "code": "np.array((a, b))", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "fetch address information for host 'google.com' ion port 80", "code": "socket.getaddrinfo('google.com', 80)", "library": ["socket"], "exlib": []}
+{"prompt": "add a column 'day' with value 'sat' to dataframe `df`", "code": "df.xs('sat', level='day', drop_level=False)", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "return a 401 unauthorized in django", "code": "HttpResponse('Unauthorized', status=401)", "library": ["django"], "exlib": ["django"]}
+{"prompt": "Flask set folder 'wherever' as the default template folder", "code": "Flask('test', template_folder='wherever')", "library": ["flask"], "exlib": ["flask"]}
+{"prompt": "sort a list of lists 'c2' such that third row comes first", "code": "c2.sort(key=lambda row: row[2])", "library": [], "exlib": []}
+{"prompt": "sort a list of lists 'c2' in reversed row order", "code": "c2.sort(key=lambda row: (row[2], row[1], row[0]))", "library": [], "exlib": []}
+{"prompt": "Sorting a list of lists `c2`, each by the third and second row", "code": "c2.sort(key=lambda row: (row[2], row[1]))", "library": [], "exlib": []}
+{"prompt": "set font `Arial` to display non-ascii characters in matplotlib", "code": "matplotlib.rc('font', **{'sans-serif': 'Arial', 'family': 'sans-serif'})", "library": ["matplotlib"], "exlib": ["matplotlib"]}
+{"prompt": "Convert  DateTime column 'date' of pandas dataframe 'df' to ordinal", "code": "df['date'].apply(lambda x: x.toordinal())", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "Get the integer location of a key `bob` in a pandas data frame `df`", "code": "df.index.get_loc('bob')", "library": ["numpy", "pandas"], "exlib": ["numpy", "pandas"]}
+{"prompt": "add an item with key 'third_key' and value 1 to an dictionary `my_dict`", "code": "my_dict.update({'third_key': 1})", "library": [], "exlib": []}
+{"prompt": "declare an array `my_list`", "code": "my_list = []", "library": [], "exlib": []}
+{"prompt": "Insert item `12` to a list `my_list`", "code": "my_list.append(12)", "library": [], "exlib": []}
+{"prompt": "add an entry 'wuggah' at the beginning of list `myList`", "code": "myList.insert(0, 'wuggah')", "library": [], "exlib": []}
+{"prompt": "convert a hex-string representation `hex_str` to actual bytes", "code": "bytes.fromhex(hex_str.replace('\\\\x', ''))", "library": [], "exlib": []}
+{"prompt": "select the last column of dataframe `df`", "code": "df[df.columns[-1]]", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "get the first value from dataframe `df` where column 'Letters' is equal to 'C'", "code": "df.loc[df['Letters'] == 'C', 'Letters'].values[0]", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "converting two lists `[1, 2, 3]` and `[4, 5, 6]` into a matrix", "code": "np.column_stack(([1, 2, 3], [4, 5, 6]))", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "get the type of `i`", "code": "type(i)", "library": [], "exlib": []}
+{"prompt": "determine the type of variable `v`", "code": "type(v)", "library": [], "exlib": []}
+{"prompt": "determine the type of variable `v`", "code": "type(v)", "library": [], "exlib": []}
+{"prompt": "get the type of variable `variable_name`", "code": "type(variable_name)", "library": [], "exlib": []}
+{"prompt": "get the 5th item of a generator `g`", "code": "next(itertools.islice(g, 5, 5 + 1))", "library": ["itertools"], "exlib": []}
+{"prompt": "return a string `word` with string format", "code": "'\"{}\"'.format(word)", "library": [], "exlib": []}
+{"prompt": "join a list of strings `list` using a space ' '", "code": "\"\"\" \"\"\".join(list)", "library": [], "exlib": []}
+{"prompt": "create list `y` containing two empty lists", "code": "y = [[] for n in range(2)]", "library": [], "exlib": []}
+{"prompt": "read a file `filename` into a list `data`", "code": "data = [line.strip() for line in open(filename, 'r')]", "library": [], "exlib": []}
+{"prompt": "delete all occurrences of character 'i' in string 'it is icy'", "code": "\"\"\"\"\"\".join([char for char in 'it is icy' if char != 'i'])", "library": [], "exlib": []}
+{"prompt": "delete all instances of a character 'i' in a string 'it is icy'", "code": "re.sub('i', '', 'it is icy')", "library": ["re"], "exlib": []}
+{"prompt": "delete all characters \"i\" in string \"it is icy\"", "code": "\"\"\"it is icy\"\"\".replace('i', '')", "library": [], "exlib": []}
+{"prompt": "Drop rows of pandas dataframe `df` having NaN in column at index \"1\"", "code": "df.dropna(subset=[1])", "library": ["numpy", "pandas"], "exlib": ["numpy", "pandas"]}
+{"prompt": "get elements from list `myList`, that have a field `n` value 30", "code": "[x for x in myList if x.n == 30]", "library": ["numpy", "pandas"], "exlib": ["numpy", "pandas"]}
+{"prompt": "converting list of strings `intstringlist` to list of integer `nums`", "code": "nums = [int(x) for x in intstringlist]", "library": [], "exlib": []}
+{"prompt": "print \".\" without newline", "code": "sys.stdout.write('.')", "library": ["sys"], "exlib": []}
+{"prompt": "round off the float that is the product of `2.52 * 100` and convert it to an int", "code": "int(round(2.52 * 100))", "library": [], "exlib": []}
+{"prompt": "Find all files `files` in directory '/mydir' with extension '.txt'", "code": "\n\tos.chdir('/mydir')\n\tfiles = [] \n\tfor file in glob.glob('*.txt'):\n\t\tfiles.append(file)\n", "library": ["glob", "os"], "exlib": []}
+{"prompt": "Find all files in directory \"/mydir\" with extension \".txt\"", "code": "[file for file in os.listdir('/mydir') if file.endswith('.txt')]", "library": ["os"], "exlib": []}
+{"prompt": "Find all files in directory \"/mydir\" with extension \".txt\"", "code": "[file for (root, dirs, files) in os.walk('/mydir') for file in files if file.endswith('.txt')]", "library": ["os"], "exlib": []}
+{"prompt": "plot dataframe `df` without a legend", "code": "df.plot(legend=False)", "library": ["os", "pandas"], "exlib": ["pandas"]}
+{"prompt": "loop through the IP address range \"192.168.x.x\"", "code": "['192.168.%d.%d'%(i, j) for i in range(256) for j in range(256)]", "library": [], "exlib": []}
+{"prompt": "Sum the corresponding decimal values for binary values of each boolean element in list `x`", "code": "sum(1 << i for i, b in enumerate(x) if b)", "library": [], "exlib": []}
+{"prompt": "write multiple strings `line1`, `line2` and `line3` in one line in a file `target`", "code": "target.write('%r\\n%r\\n%r\\n' % (line1, line2, line3))", "library": [], "exlib": []}
+{"prompt": "Convert list of lists `data` into a flat list", "code": "[y for x in data for y in (x if isinstance(x, list) else [x])]", "library": [], "exlib": []}
+{"prompt": "Print new line character as `\\n` in a string `foo\\nbar`", "code": "'foo\\nbar'.encode('unicode_escape')", "library": [], "exlib": []}
+{"prompt": "remove last comma character ',' in string `s`", "code": "\"\"\"\"\"\".join(s.rsplit(',', 1))", "library": [], "exlib": []}
+{"prompt": "calculate the mean of each element in array `x` with the element previous to it", "code": "(x[1:] + x[:-1]) / 2", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "get an array of the mean of each two consecutive values in numpy array `x`", "code": "x[:-1] + (x[1:] - x[:-1]) / 2", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "load data containing `utf-8` from file `new.txt` into numpy array `arr`", "code": "arr = numpy.fromiter(codecs.open('new.txt', encoding='utf-8'), dtype='<U2')", "library": ["codecs", "numpy"], "exlib": ["numpy"]}
+{"prompt": "reverse sort list of dicts `l` by value for key `time`", "code": "l = sorted(l, key=itemgetter('time'), reverse=True)", "library": ["operator"], "exlib": []}
+{"prompt": "Sort a list of dictionary `l` based on key `time` in descending order", "code": "l = sorted(l, key=lambda a: a['time'], reverse=True)", "library": [], "exlib": []}
+{"prompt": "get rows of dataframe `df` that match regex '(Hel|Just)'", "code": "df.loc[df[0].str.contains('(Hel|Just)')]", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "find the string in `your_string` between two special characters \"[\" and \"]\"", "code": "re.search('\\\\[(.*)\\\\]', your_string).group(1)", "library": ["re"], "exlib": []}
+{"prompt": "create a list of date string in 'yyyymmdd' format with Python Pandas from '20130226' to '20130302'", "code": "[d.strftime('%Y%m%d') for d in pandas.date_range('20130226', '20130302')]", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "count number of times string 'brown' occurred in string 'The big brown fox is brown'", "code": "\"\"\"The big brown fox is brown\"\"\".count('brown')", "library": [], "exlib": []}
+{"prompt": "decode json string `request_body` to python dict", "code": "json.loads(request_body)", "library": ["json"], "exlib": []}
+{"prompt": "download the file from url `url` and save it under file `file_name`", "code": "urllib.request.urlretrieve(url, file_name)", "library": ["urllib"], "exlib": []}
+{"prompt": "split string `text` by space", "code": "text.split()", "library": [], "exlib": []}
+{"prompt": "split string `text` by \",\"", "code": "text.split(',')", "library": [], "exlib": []}
+{"prompt": "Split string `line` into a list by whitespace", "code": "line.split()", "library": [], "exlib": []}
+{"prompt": "replace dot characters  '.' associated with ascii letters in list `s` with space ' '", "code": "[re.sub('(?<!\\\\d)\\\\.(?!\\\\d)', ' ', i) for i in s]", "library": ["re"], "exlib": []}
+{"prompt": "sort list `list_of_strings` based on second index of each string `s`", "code": "sorted(list_of_strings, key=lambda s: s.split(',')[1])", "library": [], "exlib": []}
+{"prompt": "eliminate non-integer items from list `lst`", "code": "[element for element in lst if isinstance(element, int)]", "library": [], "exlib": []}
+{"prompt": "get all the elements except strings from the list 'lst'.", "code": "[element for element in lst if not isinstance(element, str)]", "library": [], "exlib": []}
+{"prompt": "Sort a list of dictionaries `list_to_be_sorted` by the value of the dictionary key `name`", "code": "sorted(list_to_be_sorted, key=lambda k: k['name'])", "library": [], "exlib": []}
+{"prompt": "sort a list of dictionaries `l` by values in key `name` in descending order", "code": "sorted(l, key=itemgetter('name'), reverse=True)", "library": ["operator"], "exlib": []}
+{"prompt": "sort a list of dictionaries `list_of_dicts` by `name` values of the dictionary", "code": "list_of_dicts.sort(key=operator.itemgetter('name'))", "library": ["operator"], "exlib": []}
+{"prompt": "sort a list of dictionaries `list_of_dicts` by `age` values of the dictionary", "code": "list_of_dicts.sort(key=operator.itemgetter('age'))", "library": ["operator"], "exlib": []}
+{"prompt": "sort a Dataframe `df` by the total ocurrences in a column 'scores' group by 'prots'", "code": "df.groupby('prots').sum().sort_values('scores', ascending=False)", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "join together with \",\" elements inside a list indexed with 'category' within a dictionary `trans`", "code": "\"\"\",\"\"\".join(trans['category'])", "library": [], "exlib": []}
+{"prompt": "concatenate array of strings `['A', 'B', 'C', 'D']` into a string", "code": "\"\"\"\"\"\".join(['A', 'B', 'C', 'D'])", "library": [], "exlib": []}
+{"prompt": "Remove all strings from a list a strings `sents` where the values starts with `@$\\t` or `#`", "code": "[x for x in sents if not x.startswith('@$\\t') and not x.startswith('#')]", "library": [], "exlib": []}
+{"prompt": "sort a list of dictionary `list` first by key `points` and then by `time`", "code": "list.sort(key=lambda item: (item['points'], item['time']))", "library": [], "exlib": []}
+{"prompt": "convert datetime object `(1970, 1, 1)` to seconds", "code": "datetime.datetime(1970, 1, 1).second", "library": ["datetime", "time"], "exlib": []}
+{"prompt": "insert `_suff` before the file extension in `long.file.name.jpg` or replace `_a` with `suff` if it precedes the extension.", "code": "re.sub('(\\\\_a)?\\\\.([^\\\\.]*)$', '_suff.\\\\2', 'long.file.name.jpg')", "library": ["re"], "exlib": []}
+{"prompt": "reload a module `module`", "code": "imp.reload(module)", "library": ["imp"], "exlib": []}
+{"prompt": "Convert integer `number` into an unassigned integer", "code": "struct.unpack('H', struct.pack('h', number))", "library": ["struct"], "exlib": []}
+{"prompt": "convert int values in list `numlist` to float", "code": "numlist = [float(x) for x in numlist]", "library": [], "exlib": []}
+{"prompt": "write dataframe `df`, excluding index, to a csv file `filename`", "code": "df.to_csv(filename, index=False)", "library": ["pandas"], "exlib": ["pandas"]}
+{"prompt": "convert a urllib unquoted string `unescaped` to a json data `json_data`", "code": "json_data = json.loads(unescaped)", "library": ["json"], "exlib": []}
+{"prompt": "Create a list containing all ascii characters as its elements", "code": "[chr(i) for i in range(127)]", "library": [], "exlib": []}
+{"prompt": "write `newFileBytes` to a binary file `newFile`", "code": "newFile.write(struct.pack('5B', *newFileBytes))", "library": ["struct"], "exlib": []}
+{"prompt": "python regex - check for a capital letter with a following lowercase in string `string`", "code": "re.sub('^[A-Z0-9]*(?![a-z])', '', string)", "library": ["re"], "exlib": []}
+{"prompt": "get the last key of dictionary `dict`", "code": "list(dict.keys())[-1]", "library": [], "exlib": []}
+{"prompt": "write line \"hi there\" to file `f`", "code": "print('hi there', file=f)", "library": [], "exlib": []}
+{"prompt": "write line \"hi there\" to file `myfile`", "code": "\n\tf = open(myfile, 'w')\n\tf.write(\"hi there\\n\")\n\tf.close()\n", "library": [], "exlib": []}
+{"prompt": "write line \"Hello\" to file `somefile.txt`", "code": "\n\twith open('somefile.txt', 'a') as the_file: \n\t\tthe_file.write('Hello\\n')\n", "library": [], "exlib": []}
+{"prompt": "convert unicode string `s` to ascii", "code": "s.encode('iso-8859-15')", "library": [], "exlib": []}
+{"prompt": "Find all numbers and dots from a string `text` using regex", "code": "re.findall('Test([0-9.]*[0-9]+)', text)", "library": ["re"], "exlib": []}
+{"prompt": "execute script 'script.ps1' using 'powershell.exe' shell", "code": "os.system('powershell.exe', 'script.ps1')", "library": ["os"], "exlib": []}
+{"prompt": "Sort a list of tuples `b` by third item in the tuple", "code": "b.sort(key=lambda x: x[2])", "library": [], "exlib": []}
+{"prompt": "create a datetime with the current date & time", "code": "datetime.datetime.now()", "library": ["datetime"], "exlib": []}
+{"prompt": "get the index of an integer `1` from a list `lst` if the list also contains boolean items", "code": "next(i for i, x in enumerate(lst) if not isinstance(x, bool) and x == 1)", "library": [], "exlib": []}
+{"prompt": "subtract 13 from every number in a list `a`", "code": "a[:] = [(x - 13) for x in a]", "library": [], "exlib": []}
+{"prompt": "get the highest element in absolute value in a numpy matrix `x`", "code": "max(x.min(), x.max(), key=abs)", "library": ["numpy"], "exlib": ["numpy"]}
+{"prompt": "Get all urls within text `s`", "code": "re.findall(r'\"(http.*?)\"', s, re.MULTILINE | re.DOTALL)", "library": ["re"], "exlib": []}
+{"prompt": "split a string `mystring` considering the spaces ' '", "code": "mystring.replace(' ', '! !').split('!')", "library": [], "exlib": []}
+{"prompt": "open file `path` with mode 'r'", "code": "open(path, 'r')", "library": [], "exlib": []}
+{"prompt": "sum elements at the same index in list `data`", "code": "[[sum(item) for item in zip(*items)] for items in zip(*data)]", "library": [], "exlib": []}
+{"prompt": "add a new axis to array `a`", "code": "a[:, (np.newaxis)]", "library": ["numpy"], "exlib": ["numpy"]}
